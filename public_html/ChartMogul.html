@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chart Mogul</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/ChartMogul.css" rel="stylesheet" />
+    </head>
+    <body>
+        <section class="gh-section gh-section-dark gh-section-about-data">
+            <div class="inner">
+                <header class="gh-section-head">
+                    <h2><a class="gh-anchor" name="metrics">Revenue (Last 12 Months)</a></h2>
+                </header>
+                <section class="gh-about-data">
+                    <div class="gh-about-data-chart">
+                        <canvas id="myChart" class="gh-about-data-chart-canvas chartjs-render-monitor" height="120"></canvas>
+                        <div class="gh-about-data-chart-content">
+                            <div class="gh-about-data-chart-figure"><span>$</span>0</div>
+                            <div class="gh-about-data-chart-description">Monthly Recurring Revenue</div>
+                            <sub>Last 30 days</sub>
+                        </div>
+                        <div class="gh-about-data-metrics">
+                            <div class="gh-about-data-item">
+                                <div class="gh-about-data-item-figure">0</div>
+                                <div class="gh-about-data-item-description">Active Clients</div>
+                                <sub>Last 30 days</sub>
+                            </div>
+                            <div class="gh-about-data-item">
+                                <div class="gh-about-data-item-figure"><span>$</span>0</div>
+                                <div class="gh-about-data-item-description">Average Sale Price</div>
+                                <sub>Last 30 days</sub>
+                            </div>
+                            <div class="gh-about-data-item">
+                                <div class="gh-about-data-item-figure"><span>$</span>0</div>
+                                <div class="gh-about-data-item-description">Average Revenue per Account</div>
+                                <sub>Last 30 days</sub>
+                            </div>
+                            <div class="gh-about-data-item">
+                                <div class="gh-about-data-item-figure">0<span>%</span></div>
+                                <div class="gh-about-data-item-description">Net MRR Churn Rate</div>
+                                <sub>Last 30 days</sub>
+                            </div>
+                            <div class="gh-about-data-item">
+                                <div class="gh-about-data-item-figure"><span>$</span>0</div>
+                                <div class="gh-about-data-item-description">Annual Recurring Revenue</div>
+                                <sub>Last 30 days</sub>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <a class="gh-about-chartmogul-link" href="https://chartmogul.com" target="_blank" rel="noopener noreferrer">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAagAAABKCAMAAADZlzDPAAAAqFBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8j1z1tAAAAN3RSTlMACco9GiLu+vZZqOkt3bP8kQ0SmXEEjUbV8s8zB+PFOCVgQK1sZaIpFsK3eU1SvH6dlogxgx5d7UaBbAAAC0BJREFUeNrs2P2XsUAUB/CrTVKUWm8lQkRCWNz//z97XnoxUyPr7NPhnGc+P05bTffbNdMCx3Ecx3Ecx/13zOl2cfKV3zrR1V07wL2h+kJpN5CgBp2BAdxbWc80C4sa7dMIuLdxidp4j6UNgHsLZjTGMrrmAvd6uyE+YvVN4F7L/NTxG+w5cK+0miBlHCidMAxPB23YQJL0AdzrGGROVhC6opO12urqt/Fm0wPuZVyil05fkCdeAx0Tag24l9llMUQXYOltA4wN+f8pXmgq4V/KCu5xFir+EQL3Qmf8TV1CmdYG0erzX76X6l0DW2lBOcfdroB7tUKrGCbvnjdXm8763t62hY0fDtbAvadpN5Axo6uHHe+sN9Q6SpgnXN86KmPUjA6e53UW8wvQerVEDyiMYfaJj46X/JlTY3OYU2HcomyKRiQhy2QOZZzWtttXPM/zz0t3XTZr53HByAd6zJkf7Qamxt5MBMJASAyAZE6S4RDYzI0Q2wLbWaDsle4oV+vLRmDr0I2RjBYLfBT+OjLbKcA75JNzvwlPgoUZve3Pa5Cz9oSYT11mFSTDXciIQqIP37ALMEclM2li4gokERMHYFtiQgM2D/N0YVnLfZuy7YE0w5hXqKqcvHuMwg/GeJ8mApOryMUGHABNTK9sUw8z0jHWgUwdExt4aKpg0ZIVVJOeTtqDn8DU22PCagGTggybFTk3Fdk2dGtiTCLOpQ/UIe9qYZn9GopqEfOkRt+gK9PGmEAHlWbcZwSlPW6nNjLMfh7UVwNTpyeCwvbo6aC8Ozcyx2kp54V+suhaS5KUS8qAPFHDOzZm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" alt="ChartMogul" width="180" height="32">
+                    <span>Subscription Analytics</span>
+                </a>
+            </div>
+        </section>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="js/ChartMogul.js" type="text/javascript"></script>
+    </body>
+</html>

@@ -1,0 +1,147 @@
+/* 
+    Created on : Feb 8, 2022, 11:43:03 AM
+    Author     : krishna-mac
+*/
+
+
+#what-we-do-1 > div {
+    background: #1a1a1a;
+}
+.gh-section *, .gh-section :after, .gh-section :before {
+    box-sizing: border-box;
+}
+.gh-section.gh-section-about-data {
+    background: #1a1a1a;
+    position: relative;
+}
+.gh-section-dark {
+    background-color: #15171a;
+    color: #fff;
+    text-shadow: rgba(0,0,0,.1)0 1px 2px;
+}
+.gh-section {
+    margin: 0 -6vmin;
+    padding: 6vw;
+    font-family: sans-serif;
+}
+.inner {
+    margin: 0 auto;
+    max-width: 1380px;
+    width: 100%;
+}
+.gh-section-head {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+    text-align: center;
+}
+.gh-section-head h2 {
+    font-size: 2.6rem;
+    font-weight: 400;
+    margin: 1em 0 0.3em;
+}
+.gh-section-dark h2 {
+    color: #fff;
+}
+.gh-section-dark a.gh-anchor {
+    color: #fff;
+}
+.gh-anchor, .gh-anchor:hover {
+    text-decoration: none;
+}
+.gh-anchor {
+    color: inherit;
+}
+.gh-section-head p {
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.5em;
+    margin: 0;
+    opacity: .8;
+}
+.gh-section-dark p {
+    opacity: .8;
+}
+.gh-about-data-chart {
+    margin: 4vw -42px 10px -21px;
+    position: relative;
+}
+.chartjs-render-monitor {
+    animation: chartjs-render-animation 1ms;
+}
+.gh-about-data-chart-content {
+    left: -5px;
+    position: absolute;
+    top: 20%;
+}
+.gh-about-data-chart-figure {
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 1.15em;
+    text-indent: -2px;
+}
+.gh-about-data-chart-figure span {
+    font-weight: 300;
+}
+.gh-about-data-chart-description {
+    font-size: 1.2rem;
+}
+.gh-about-data-metrics {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 26px;
+    margin-left: 11px;
+}
+.gh-about-data-item {
+    background: #1a1a1a;
+    border-radius: 6px;
+    box-shadow: 0 0 1px rgb(0 0 0 / 15%), 0 2px 4px rgb(0 0 0 / 6%), inset 0 0 0 1px rgb(255 255 255 / 3%);
+    color: rgba(255,255,255,.7);
+    flex: 1 0 220px;
+    line-height: 1.3em;
+    margin: 10px;
+    padding: 20px 20px 21px;
+    text-align: center;
+    text-shadow: none;
+}
+.gh-about-data-item-figure {
+    color: #fff;
+    font-size: 1.7rem;
+    font-weight: 600;
+    line-height: 1.15em;
+}
+.gh-about-data-item-figure span {
+    font-weight: 300;
+}
+.gh-about-chartmogul-link {
+    align-items: center;
+    color: rgba(255,255,255,.6)!important;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3rem;
+    line-height: 1.4em;
+    margin: 2vw auto 0;
+    padding: 0 10px;
+    text-align: center;
+    text-decoration: none!important;
+    width: 200px;
+}
+.gh-about-chartmogul-link img {
+    flex: none;
+}
+.gh-about-chartmogul-link span {
+    font-size: 0.8rem;
+    line-height: 1.4em;
+    text-align: center;
+}
+
+.gh-section sub {
+    font-size: 12px;
+}
+
+@media(max-width:600px){
+    #myChart, .gh-about-data-chart-content {
+        display: none !important;
+    }
+}
