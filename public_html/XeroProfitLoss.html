@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chart Mogul</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/XeroProfitLoss.css" rel="stylesheet" />
+    </head>
+    <body>
+        <section class="gh4 gh2section gh2section-dark gh2section-about-data">
+            <div class="inner">
+                <header class="gh2section-head">
+                    <h2 id="xerotitle" class="gh2anchor"></h2>
+                    <select onchange="loadXeroData(this.value)" style="width: 160px;height: 32px;background-color: lightgrey;">
+                        <option value="cm">This Month</option>
+                        <option value="cq">This Quarter</option>
+                        <option value="cfy" selected="selected">This Financial Year</option>
+                        <option value="lm">Last Month</option>
+                        <option value="lq">Last Quarter</option>
+                        <option value="mtd">Month to date</option>
+                        <option value="ytd">Year to date</option>
+                    </select>
+                </header>
+                <section class="gh2about-data">
+                    <table id="xerodata" style="margin:0 5px;"><tbody></tbody></table>
+                </section>
+            </div>
+        </section>
+        <script type="text/javascript">
+            function loadXeroData(timeframe) {
+                document.querySelector("#xerodata tbody").innerHTML = "";
+                fetch("https://xec5rq4coevoybidpya5ajl36m0psgkj.lambda-url.us-east-1.on.aws/?timeframe=" + timeframe)
+                        .then(response => response.json())
+                        .then(data => {
+                            var tbody = document.querySelector("#xerodata tbody");
+                            for (const report of data.Reports) {
+                                document.querySelector("#xerotitle").innerHTML = report.ReportTitles.join("<br/>");
+                                for (const row of report.Rows) {
+                                    if (row.RowType == "Section") {
+
+                                        var tr = document.createElement("tr");
+                                        var td = document.createElement("td");
+                                        var td2 = document.createElement("td");
+                                        td.innerHTML = "<b>" + row.Title + "</b>";
+                                        td.style.fontWeight = "bold";
+                                        td.style.fontSize = "20px";
+                                        td.style.width = "800px";
+                                        tr.appendChild(td);
+                                        tr.appendChild(td2);
+                                        tbody.appendChild(tr);
+
+                                        for (const line of row.Rows) {
+                                            var tr = document.createElement("tr");
+                                            for (const cell of line.Cells) {
+                                                var td = document.createElement("td");
+                                                td.textContent = cell.Value;
+                                                td.style.paddingLeft = "28px";
+                                                tr.appendChild(td);
+                                            }
+                                            tbody.appendChild(tr);
+                                        }
+
+                                        if (row.Title === "" || row.Title === " " || row.Title === null) {
+                                            tr.firstChild.style.paddingLeft = "0px";
+                                            tr.firstChild.style.fontSize = "20px";
+                                        }
+
+                                        tr.firstChild.style.fontWeight = "bold";
+                                        tr.lastChild.style.borderTop = "2px solid #fff";
+                                        tr.lastChild.style.borderBottom = "2px solid #fff";
+
+                                        var tr = document.createElement("tr");
+                                        var td = document.createElement("td");
+                                        var td2 = document.createElement("td");
+                                        tr.appendChild(td);
+                                        tr.appendChild(td2);
+                                        tbody.appendChild(tr);
+
+                                    }
+                                }
+                            }
+                        });
+            }
+            loadXeroData("cfy");
+        </script>
+    </body>
+</html>
