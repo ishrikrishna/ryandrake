@@ -1,0 +1,170 @@
+/* 
+    Created on : Feb 8, 2022, 11:43:13 AM
+    Author     : krishna
+*/
+
+
+.gh2section *, .gh2section :after, .gh2section :before {
+    box-sizing: border-box;
+}
+.gh2section.gh2section-about-data {
+    background: #1a1a1a;
+    position: relative;
+}
+.gh2section-dark {
+    background-color: #15171a;
+    color: #fff;
+    text-shadow: rgba(0,0,0,.1)0 1px 2px;
+}
+.gh2section {
+    margin: 0 -6vmin;
+    padding: 6vw;
+    font-family: sans-serif;
+}
+.inner {
+    margin: 0 auto;
+    max-width: 1380px;
+    width: 100%;
+}
+.gh2section-head {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+    text-align: center;
+}
+.gh2section-head h2 {
+    font-size: 2.6rem;
+    font-weight: 400;
+    margin: 1em 0 0.3em;
+}
+.gh2section-dark h2 {
+    color: #fff;
+}
+.gh2section-dark a.gh2anchor {
+    color: #fff;
+}
+.gh2anchor, .gh2anchor:hover {
+    text-decoration: none;
+}
+.gh2anchor {
+    color: inherit;
+}
+.gh2section-head p {
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.5em;
+    margin: 0;
+    opacity: .8;
+}
+.gh2section-dark p {
+    opacity: .8;
+}
+.gh2about-data-chart {
+    margin: 4vw -42px 10px -21px;
+    position: relative;
+}
+.chartjs-render-monitor {
+    animation: chartjs-render-animation 1ms;
+}
+.gh2about-data-chart-content {
+    left: -5px;
+    position: absolute;
+    top: 20%;
+}
+.gh2about-data-chart-figure {
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 1.15em;
+    text-indent: -2px;
+}
+.gh2about-data-chart-figure span {
+    font-weight: 300;
+}
+.gh2about-data-chart-description {
+    font-size: 1.2rem;
+}
+.gh2about-data-metrics {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 20px;
+    margin-left: 0px;
+}
+.gh2about-data-item {
+    background: #1a1a1a;
+    border-radius: 6px;
+    box-shadow: 0 0 1px rgb(0 0 0 / 15%), 0 2px 4px rgb(0 0 0 / 6%), inset 0 0 0 1px rgb(255 255 255 / 3%);
+    color: rgba(255,255,255,.7);
+    flex: 1 0 220px;
+    line-height: 1.3em;
+    margin: 10px;
+    padding: 20px 20px 21px;
+    text-align: left;
+    text-shadow: none;
+    font-weight: 600;
+    max-height: 464px;
+    overflow: auto;
+}
+.gh2about-data-item-container{
+    flex: 1 0 220px;
+}
+.gh2about-data-item-figure {
+    color: #fff;
+    font-size: 1.7rem;
+    font-weight: 600;
+    line-height: 1.15em;
+}
+
+.gh2about-data-item-figure table {
+    font-size: 1rem;
+    font-weight: 400;
+    width: 100%;
+    opacity: 0.7;
+}
+
+.gh2about-data-item-figure table tr td:first-of-type {
+    color: skyblue;
+    font-weight: 600;
+}
+
+.gh2about-data-item-figure span {
+    font-weight: 300;
+}
+.gh2about-chartmogul-link {
+    align-items: center;
+    color: rgba(255,255,255,.6)!important;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3rem;
+    line-height: 1.4em;
+    margin: 2vw auto 0;
+    padding: 0 10px;
+    text-align: center;
+    text-decoration: none!important;
+    width: 200px;
+}
+.gh2about-chartmogul-link img {
+    flex: none;
+}
+.gh2about-chartmogul-link span {
+    font-size: 0.8rem;
+    line-height: 1.4em;
+    text-align: center;
+}
+
+.gh2section sub {
+    font-size: 12px;
+}
+
+.hide {
+    display: none;
+}
+.text-center {
+    text-align:center;
+}
+
+@media(max-width:600px){
+    #simpleAnalyticsChart, .gh2about-data-chart-content {
+        display: none !important;
+    }
+}
