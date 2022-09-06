@@ -168,3 +168,11 @@
         display: none !important;
     }
 }
+
+#xerodata td {
+    padding: 3.5px;
+}
+.gh4 { height:931px; }
+@media(max-width:600px){
+    .gh4 { height:auto; }
+}
